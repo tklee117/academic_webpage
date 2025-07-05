@@ -12,10 +12,6 @@ A professional academic website showcasing research, education, skills, and achi
 - **Animations**: Fade-in effects and typing animation for enhanced user experience
 - **Accessibility**: Semantic HTML and proper contrast ratios
 
-## 🚀 Live Demo
-
-Visit the live website at: [https://yourusername.github.io/your-repo-name](https://yourusername.github.io/your-repo-name)
-
 ## 🛠️ Technologies Used
 
 - **HTML5**: Semantic markup
