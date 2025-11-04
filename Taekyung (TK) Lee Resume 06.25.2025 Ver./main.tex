@@ -1,0 +1,306 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    {\Huge \scshape \textbf{Taekyung Lee}} \\ \vspace{1pt}
+    MSC 621, 1200 East California Boulevard, Pasadena, CA 91125 \\ \vspace{1pt}
+    \small \raisebox{-0.1\height}\faPhone\ \underline{626-567-3544} ~ \href{mailto:tlee2@caltech.edu}{\raisebox{-0.2\height}\faEnvelope\  \underline{tlee2@caltech.edu}} ~ 
+    \href{https://linkedin.com/in/taekyunglee04}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/taekyunglee04}} ~
+    \href{https://github.com/tklee117}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/tklee117}}
+    \vspace{-8pt}
+\end{center}
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Summary}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+    Electrical and Robotics Engineering student interested in \textbf{swarm robotics, control theory, reinforcement learning, and mechatronics}. Engaged in designing and interfacing robotic systems, focusing on mechanical/electrical components and motion planning. Notable projects include the development of a virtual dual-arm ball-setting robot, a color based object-detection and pick-and-place system, and the chasis and arm autonomy system design for a lunar modular rover.
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {California Institute of Technology (Caltech)}{September 2023 -- Present}
+      {Bachelor of Science expected June 2027}{Pasadena, CA}
+        \resumeItemListStart
+            \resumeItem{Major: Electrical Engineering (Intelligent Systems Track), Minor: Robotics, Control+Dynamical System (GPA: 4.2/4.3)}
+            \resumeItem{Relevant Coursework: (Taken) - Robotics, Deterministic Analysis of Systems and Circuits, Single Board Computers in Research, Introduction to Programming Methods (By Summer 2025) - Experimental Robotics, Machine Learning \& Data Mining, Statistical Inference, Physics of Electrical Engineering}
+
+        \resumeItemListEnd
+    \resumeSubheading
+      {Korean Minjok Leadership Academy (KMLA)}{February 2020 -- February 2023}
+      {Gangwon State Governor Award (The Highest Graduation Award)}{Hoengseong, South Korea}
+        \resumeItemListStart
+            \resumeItem{GPA: 4.93/5.0}
+            \resumeItem{Relevant Coursework: Data Science, Analytical Mechanics, Discrete Mathematics, A.I. Mathematics}
+            \resumeItem{Meritorious Service Award, Yeongjae Merit Scholarship, 2 Yeonghyae Merit Scholarships, 18 First/Second Place Honors}
+        \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{General Skills}{: Arduino, Raspberry Pi, Linux, ROS 2 (Humble)} \\
+     \textbf{CAD Software}{: Onshape, Solidworks} \\
+     \textbf{Programming}{: Python, PyTorch, Java, C/C++, MATLAB} \\
+     \textbf{Prototyping Machines}{: 3D Printers, Water-Jet Cutters} \\
+     \textbf{Languages}{: Fluent in English and Korean, 2 years of Spanish in high school education} \\
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+%-----------EXPERIENCE-----------
+\section{Experience, Research, and Projects}
+  \resumeSubHeadingListStart
+
+\resumeSubheading
+      {\textbf{California Institute of Technology (Caltech)}}{October 2025 -- Present}
+      {\textbf{\href{https://robotics.caltech.edu/wiki/index.php/Robotics}{{Burdick Research Group}} Student Researcher}}{Pasadena, CA}
+      \resumeItemListStart
+        \resumeItem{}
+      \resumeItemListEnd
+
+\resumeSubheading
+      {\textbf{Carnegie Mellon University Robotics Institute Summer Scholars (CMU RISS)}}{June 2025 -- Present}
+      {\textbf{Advanced Agent Robotics Technology Lab \href{https://www.cs.cmu.edu/~softagents/}{(\underline{AART})} Intern}}{Pittsburgh, PA}
+      \resumeItemListStart
+        \resumeItem{}
+      \resumeItemListEnd
+      
+\resumeSubheading
+      {\textbf{California Institute of Technology (Caltech)}}{January 2025 -- Present}
+      {\textbf{Autonomous Robotics and Control Lab \href{https://aerospacerobotics.caltech.edu/}{(\underline{ARCL})} Student Researcher}}{Pasadena, CA}
+      \resumeItemListStart
+        \resumeItem{Developing a system for multi-quadcopter ping pong by implementing an extended Kalman filter and machine learning models to predict the most probable collision point for ball interception}
+        \resumeItem{Designing adaptive path planning algorithms to enable real-time trajectory optimization for coordinated quadcopter motion.}
+      \resumeItemListEnd
+
+\resumeSubheading
+      {\textbf{California Institute of Technology (Caltech)}}{October 2024 -- December 2024}
+      {\textbf{Robotics (ME/CS/EE 133a) Final Project: \href{https://github.com/geo-179/dual_arm_ball_setter}{"\underline{Dual-Arm Ball-Setting Robot}"}}}{Pasadena, CA}
+      \resumeItemListStart
+        \resumeItem{Developed and implemented a virtual dual-arm volleyball-setting robot using the Franka Emika Panda arm in RVIZ by designing a closed kinematic chain with a shared paddle link.}
+        \resumeItem{Utilized hierarchical task-based inverse kinematics to prioritize tasks (closed chain $\rightarrow$ orientation $\rightarrow$ position $\rightarrow$ natural joint configuration) for the ball's x,y component velocity cancellation (to eject the ball upwards as a volleyball setter).
+        }
+        \resumeItem{Mathematically proved the general null space projections of nested tasks for inverse kinematics and evaluated the expenses of task order exchange between the secondary and tertiary tasks.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\textbf{Seoul National University (SNU)}}{July 2024 -- September 2024}
+      {\textbf{Soft Robotics and Bionics Laboratory (\href{https://softrobotics.snu.ac.kr/}{\underline{SRBL}}) Summer Research Intern}}{Seoul, South Korea}
+      \resumeItemListStart
+        \resumeItem{Developed experimental setups to evaluate the static and dynamic performance of soft robotic actuators using a Universal Robot UR5e.}
+        \resumeItem{Programmed predefined motion sequences in ROS 2, including pick-and-place tasks, to analyze actuator deformation under specific forces. Implemented PRM-based path planning to study deformation across varying angles and integrated a real-time feedback loop for torque and force control.}
+        \resumeItem{Created a ROS2 object-detection node using OpenCV, enabling real-time object localization. Compared soft actuators' performance against a standard (Robotiq) gripper.}
+      \resumeItemListEnd
+    \newpage
+    \resumeSubheading
+      {\textbf{Caltech Air and Outer Space (\href{https://caos.caltech.edu/}{\underline{CAOS}})}}{October 2023 -- Present}
+      {\textbf{Mechanical (Drive and Chassis), Software (Arm Kinematics and Autonomy) Team}}{Pasadena, CA}
+      \resumeItemListStart
+        \resumeItem{Member of the mechanical and software subdivision on project CRATER (Caltech Rover Autonomy, Technology, and Exploration Research): Development of a modular rover that can robustly interface with other robotics systems to initiate complex mission operations in extreme environments.}
+        \resumeItem{Designed an optimal design for wheels that increases traction when traversing on soft terrains and stabilizes the rover while skid-steering and side-sloping.}
+        \resumeItem{Currently working on autonomous control of the custom robotic arm (used for collecting samples and completing tasks). }
+      \resumeItemListEnd
+
+
+    \resumeSubheading
+      {\textbf{California Institute of Technology (Caltech)}}{October 2023 -- December 2023}
+      {\textbf{Introduction to Robotics (ME 008) Final Project: \href{https://drive.google.com/file/d/166jXECKd4d-SiWPwSpQBqCKn-TGAD84T/view?usp=sharing}{"\underline{Tennis Ball Detector Bot}"}}}{Pasadena, CA}
+      \resumeItemListStart
+        \resumeItem{Built a robotic system that consists of a camera (data processing through the detector code) and two motors (each corresponds to pan and tilt motors, controlled by controller code) that could store the positions of multiple monochromatic objects by evaluating the confidence values of the objects.}
+        \resumeItem{Implemented different modes of splines for the system's continuous scanning process and used system threading between the detector code and the controller code to share object positions that were indicated to be “highly confident.”}
+        \resumeItem{Succeeded in programming a fully-functioning system with all desired characteristics.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Korean Minjok Leadershp Academy (KMLA)}{April 2021 -- August 2021}
+      {Individual Research}{Hoengseong, South Korea}
+      \resumeItemListStart
+        \resumeItem{Project Title: "Gyroscopic Eddy Current Pendulum Damping System for Stabilization of Buildings in Seismic Waves"}
+        \resumeItem{Invented a scaled down version of a damping system prototype that adjusts its frequency to its fastest damp rate by proving that a gyroscopic pendulum that induces electromagnetic forces is a versatile damper suitable for preventing seismic wave damage.}
+        \resumeItem{Won a gold medal and special award at the 6th International Invention Innovation Competition in Canada and was selected as a scholar of 2021 Fourth Industrial Evolution Power Korea Scholarship: \href{https://www.edaily.co.kr/news/read?newsId=01931926629243752&mediaCodeNo=257}{\underline{Article}}}
+    \resumeItemListEnd
+
+    
+  \resumeSubHeadingListEnd
+
+
+
+
+%-----------INVOLVEMENT---------------
+\section{Academic Honors/Awards}
+    \resumeSubHeadingListStart
+        \resumeSubheading{Korean Presidential Science Scholarship}{September 2023 -- Present}{President of South Korea}{Seoul, South Korea}
+            \resumeItemListStart
+                \resumeItem{Scholar in Physics (\$60,000 per year)}
+            \resumeItemListEnd
+
+        \resumeSubheading{Talent Award of Korea}{November 2022}{Ju-Ho Lee, Deputy Prime Minister of South Korea}{Seoul, South Korea}
+            \resumeItemListStart
+                \resumeItem{Given to top 50 high school students nationally for intelligence, passion, creativity, and community spirit}
+            \resumeItemListEnd
+
+        \resumeSubheading{Regeneron International Science and Engineering Fair (\href{https://www.societyforscience.org/isef/}{\underline{Regeneron ISEF}})}{May 2022}{George Yancopoulos, Co-founder, President and Chief Scientific Officer, Regeneron}{Atlanta, GA}
+            \resumeItemListStart
+                \resumeItem{National Representative Team of South Korea: Gold Medal in Physics Division at Korean Science and Engineering Fair}
+                \resumeItem{Finalist in Physics and Astronomy Division (\href{https://partner.projectboard.world/isef/project/phys038---particle-permeation-controllable-soap-membrane}{\underline{PHYS 038}})}
+                \resumeItem{Project Title: "System of the Particle-Permeation Controllable Soap Membrane Filter With High Self-Recovering Property as Multiscale Particle 'Switches'"}
+            \resumeItemListEnd
+
+        \resumeSubheading{Korea Young Physicists' Tournament (\href{http://www.kypt.or.kr/}{\underline{KYPT}})}{January 2022}{Hye-Sook Lim, Ministry of Science and ICT}{Incheon, South Korea}
+            \resumeItemListStart
+                \resumeItem{Ministry of Science and ICT Award (First Place Medal)}
+                \resumeItem{Investigated "Rayleigh Disk (Wave \& Oscillations), "Ring on the Rod" (Mechanics), "Unsinkable Disk" (Fluid Dynamics \& Mechanics), "Droplet Explosion" (Fluid Dynamics), and "Strange Motion" (Magnetism): \href{https://www.iypt.org/problems/problems-for-the-35th-iypt-2022/}{\underline{Problems of 2022}}}
+                \resumeItem{Opponent Presenter of Final Round "Saving Honey" (Fluid Dynamics)}
+            \resumeItemListEnd
+
+        \resumeSubheading{International Robot Olympiad (\href{https://iroc.kr/}{\underline{IRO}})}{December 2021}{Jong-Hwan Kim, President of IROC}{Daegu, South Korea}
+            \resumeItemListStart
+                \resumeItem{National Representative Team of South Korea: 2 Bronze Medals (Mission Challenge, AI Soccer Challenge) and 1 Honorable Mention (Energy Saving Challenge) in Korea Robot Olympiad (KRO)}
+                \resumeItem{1 Bronze Meda1: Mission Challenge}
+                \resumeItem{1 Technical Award: AI Soccer Challenge}
+            \resumeItemListEnd
+
+        \resumeSubheading{Hanseong Nobel Scholarship}{March 2021 -- January 2023}{Myeong-Ah Son, Chairman of Hanseong Sonjaehan Scholarship Foundation}{Seoul, South Korea}
+            \resumeItemListStart
+                \resumeItem{Scholar in Physics (\$$10,000$ per year)}
+            \resumeItemListEnd
+
+        
+    \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Publication: Patent}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {\textbf{Multi-Layer Membrane Filter for Particle Separation and Its Manufacturing Method}}{January 2024}
+      {\href{https://doi.org/10.8080/1020220117418}{\underline{Korea Patent Registration Number 10-2622010}}}{Seoul, South Korea}
+      
+  \resumeSubHeadingListEnd
+\vspace{-16pt}
+
+
+\end{document}
+

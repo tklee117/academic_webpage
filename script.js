@@ -255,7 +255,7 @@ function validateEmail(email) {
 
 // Console welcome message
 console.log('%c Welcome to Taekyung Lee\'s Academic Website! ', 'background: #2563eb; color: white; padding: 10px; border-radius: 5px; font-size: 16px; font-weight: bold;');
-console.log('🤖 Interested in robotics and control systems? Let\'s connect!');
+console.log('🤖 Interested in multi-agent systems, optimal control, and risk-aware planning? Let\'s connect!');
 console.log('📧 Email: tlee2@caltech.edu');
 console.log('🔗 LinkedIn: linkedin.com/in/taekyunglee04');
 console.log('💻 GitHub: github.com/tklee117'); 
