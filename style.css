@@ -328,6 +328,11 @@ section {
     background: #f8fafc;
 }
 
+/* Projects Section */
+.projects {
+    background: white;
+}
+
 .research-timeline {
     position: relative;
     padding-left: 2rem;
@@ -428,6 +433,10 @@ section {
 }
 
 /* Skills Section */
+.skills {
+    background: #f8fafc;
+}
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -475,7 +484,7 @@ section {
 
 /* Awards Section */
 .awards {
-    background: #f8fafc;
+    background: white;
 }
 
 .awards-grid {
@@ -550,6 +559,10 @@ section {
 }
 
 /* Publications Section */
+.publications {
+    background: #f8fafc;
+}
+
 .publications-list {
     max-width: 800px;
     margin: 0 auto;
@@ -618,7 +631,7 @@ section {
 
 /* Contact Section */
 .contact {
-    background: #f8fafc;
+    background: white;
 }
 
 .contact-content {
