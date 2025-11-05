@@ -379,6 +379,22 @@ section {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
+.research-content-with-image {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.research-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    max-height: 300px;
+}
+
 .research-content h3 {
     font-size: 1.3rem;
     font-weight: 600;
@@ -815,6 +831,14 @@ section {
 
     .research-item {
         margin-left: 0;
+    }
+
+    .research-content-with-image {
+        grid-template-columns: 1fr;
+    }
+
+    .research-image {
+        max-height: 200px;
     }
 
     .skills-grid {
