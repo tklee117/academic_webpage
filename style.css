@@ -416,6 +416,13 @@ section {
 
 .research-location {
     color: #6b7280;
+    margin-bottom: 0.5rem;
+}
+
+.research-advisor {
+    color: #2563eb;
+    font-weight: 500;
+    font-style: italic;
     margin-bottom: 1rem;
 }
 
