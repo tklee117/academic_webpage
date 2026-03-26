@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projects — Taekyung Lee">
+    <meta name="author" content="Taekyung Lee">
+    <title>Projects — Taekyung Lee</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="nav-logo-link"><h3>Taekyung Lee</h3></a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html#about" class="nav-link" data-nav="about">About</a></li>
+                <li class="nav-item"><a href="education.html" class="nav-link" data-nav="education">Education</a></li>
+                <li class="nav-item"><a href="research.html" class="nav-link" data-nav="research">Research</a></li>
+                <li class="nav-item"><a href="projects.html" class="nav-link" data-nav="projects">Projects</a></li>
+                <li class="nav-item"><a href="skills.html" class="nav-link" data-nav="skills">Skills</a></li>
+                <li class="nav-item"><a href="awards.html" class="nav-link" data-nav="awards">Awards</a></li>
+                <li class="nav-item"><a href="publications.html" class="nav-link" data-nav="publications">Publications</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link" data-nav="contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="projects" class="projects page-section-first">
+        <div class="container">
+            <h2 class="section-title">Team & Individual Projects</h2>
+            <div class="research-timeline">
+
+                <div class="research-item">
+                    <div class="research-date">May 2025 - Jun 2025</div>
+                    <div class="research-content">
+                        <div class="research-content-with-image">
+                            <div>
+                                <h3>Model Predictive Path Integral Control for Obstacle Avoidance</h3>
+                                <p class="research-org">Individual Project, California Institute of Technology</p>
+                                <p class="research-location">Pasadena, CA</p>
+                                <div class="research-details">
+                                    <ul>
+                                        <li>Implemented MPPI controller for autonomous robot navigation with safety margins using sampling-based trajectory optimization generating collision-free paths in complex obstacle environments</li>
+                                        <li>Developed risk-aware cost function formulation incorporating damage accumulation, risk gradient metrics, and CVaR-based worst-case analysis for robust safety-critical decision making</li>
+                                        <li>Conducted parameter sensitivity analysis across 20+ randomized scenarios achieving 100% success rate with adaptive conservatism tuning and 87% reduction in safety violations</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="research-image-container">
+                                <embed src="materials/ME234B_MPPI_PROEJCT-1.pdf" type="application/pdf" class="research-pdf-preview">
+                                <a href="https://github.com/tklee117/Obstacle_Avoiding_MPPI/tree/566a2fb72739a072f30816f55d239e0d1e4b5873" class="project-link" target="_blank">
+                                    <i class="fab fa-github"></i> View Project
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="research-item">
+                    <div class="research-date">Apr 2025 - Jun 2025</div>
+                    <div class="research-content">
+                        <div class="research-content-with-image">
+                            <div>
+                                <h3>ROS 2 Autonomous Pac-Man Explorer</h3>
+                                <p class="research-org">Team Project, California Institute of Technology</p>
+                                <p class="research-location">Pasadena, CA</p>
+                                <div class="research-details">
+                                    <ul>
+                                        <li>Built complete ROS 2 software stack for autonomous maze navigation on Raspberry Pi-powered differential-drive robot for wheel control, odometry fusion, and sensor integration operating at 200 Hz control frequency</li>
+                                        <li>Implemented dual-tree RRT-Connect path planner with footprint-aware collision checking enabling autonomous navigation through maze-like indoor environments</li>
+                                        <li>Developed scan-to-map LIDAR localization system fusing differential-drive odometry with gyroscope heading and publishing real-time TF transforms for 50 Hz waypoint-following control with obstacle avoidance</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="research-image-container">
+                                <img src="materials/Pacman_bot.png" alt="ROS 2 Pac-Man Robot" class="research-image">
+                                <img src="materials/Pacbot.gif" alt="ROS 2 Pac-Man Robot in Action" class="research-image">
+                                <a href="https://github.com/tklee117/pacman-bot-ros2" class="project-link" target="_blank">
+                                    <i class="fab fa-github"></i> View Project
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="research-item">
+                    <div class="research-date">Feb 2025 - Mar 2025</div>
+                    <div class="research-content">
+                        <div class="research-content-with-image">
+                            <div>
+                                <h3>Autonomous Exploration of Unknown Environments</h3>
+                                <p class="research-org">Team Project, California Institute of Technology</p>
+                                <p class="research-location">Pasadena, CA</p>
+                                <div class="research-details">
+                                    <ul>
+                                        <li>Developed integrated SLAM system combining particle filter-based localization with occupancy grid mapping achieving 38% greater exploration efficiency compared to human teleoperation baseline</li>
+                                        <li>Implemented entropy-driven A* path planning with information-gradient goal selection enabling autonomous navigation in partially observable environments</li>
+                                        <li>Engineered hybrid beacon mapping approach fusing particle filter and Kalman filter updates reducing mean squared error to 0.0309 while handling non-Gaussian uncertainty distributions</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="research-image-container">
+                                <embed src="materials/autonomous_exploration_of_unknown.pdf" type="application/pdf" class="research-pdf-preview">
+                                <img src="materials/demo_30.gif" alt="Autonomous Exploration Demo" class="research-image">
+                                <a href="https://github.com/tklee117/autonomous_exploration_of_unknown_environments" class="project-link" target="_blank">
+                                    <i class="fab fa-github"></i> View Project
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="research-item">
+                    <div class="research-date">Oct 2024 - Dec 2024</div>
+                    <div class="research-content">
+                        <div class="research-content-with-image">
+                            <div>
+                                <h3>Dual-Arm Volleyball-Setting Robot</h3>
+                                <p class="research-org">Team Project, California Institute of Technology</p>
+                                <p class="research-location">Pasadena, CA</p>
+                                <div class="research-details">
+                                    <ul>
+                                        <li>Designed and implemented closed kinematic chain system for virtual dual-arm volleyball-setting robot using Franka Emika Panda arms in RViz with shared paddle link configuration</li>
+                                        <li>Developed hierarchical task-based inverse kinematics prioritizing closed chain constraints, orientation, position, and natural joint configuration to achieve velocity cancellation for vertical ball ejection</li>
+                                        <li>Mathematically derived and proved general null space projections for nested task inverse kinematics, evaluating computational costs of task order exchanges between secondary and tertiary tasks</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="research-image-container">
+                                <embed src="materials/dual-arm-ball-setter-report.pdf" type="application/pdf" class="research-pdf-preview">
+                                <img src="materials/dual-arm-ball-setter-gif.gif" alt="Dual-Arm Volleyball-Setting Robot Demo" class="research-image">
+                                <a href="https://github.com/tklee117/dual_arm_ball_setter" class="project-link" target="_blank">
+                                    <i class="fab fa-github"></i> View Project
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Taekyung Lee. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

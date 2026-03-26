@@ -2,27 +2,82 @@
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
+if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+    }));
+}
+
+function getCurrentPageFile() {
+    let f = window.location.pathname.split('/').pop();
+    if (!f || f === '') {
+        return 'index.html';
+    }
+    return f;
+}
+
+function setActiveNav() {
+    const current = getCurrentPageFile();
+    const pageToNav = {
+        'index.html': 'about',
+        'education.html': 'education',
+        'research.html': 'research',
+        'projects.html': 'projects',
+        'skills.html': 'skills',
+        'awards.html': 'awards',
+        'publications.html': 'publications',
+        'contact.html': 'contact'
+    };
+    const navKey = pageToNav[current] || 'about';
+    document.querySelectorAll('.nav-link[data-nav]').forEach(link => {
+        link.classList.toggle('active', link.dataset.nav === navKey);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    setActiveNav();
+    const hash = window.location.hash;
+    if (hash && hash.length > 1) {
+        const target = document.getElementById(hash.slice(1));
+        if (target) {
+            requestAnimationFrame(() => {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        }
+    }
 });
 
-// Close mobile menu when clicking on a nav link
-document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
-    hamburger.classList.remove('active');
-    navMenu.classList.remove('active');
-}));
-
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+// Smooth in-page scrolling for hash links on the same HTML file
+document.querySelectorAll('a[href*="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+        const href = this.getAttribute('href');
+        if (!href || !href.includes('#')) {
+            return;
+        }
+        const hashIdx = href.indexOf('#');
+        const pathPart = href.slice(0, hashIdx);
+        const hash = href.slice(hashIdx + 1);
+        if (!hash) {
+            return;
+        }
+        const linkFile = (!pathPart || pathPart === '') ? 'index.html' : pathPart.split('/').pop();
+        const current = getCurrentPageFile();
+        const samePage = linkFile === current;
+        if (samePage) {
+            const target = document.getElementById(hash);
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
         }
     });
 });
@@ -30,6 +85,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Navbar background opacity on scroll
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
+    if (!navbar) {
+        return;
+    }
     if (window.scrollY > 50) {
         navbar.style.background = 'rgba(255, 255, 255, 0.98)';
     } else {
@@ -52,10 +110,9 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Apply fade-in animation to cards and sections
 document.addEventListener('DOMContentLoaded', () => {
     const animatedElements = document.querySelectorAll('.education-card, .research-item, .skill-category, .award-card, .publication-item');
-    
+
     animatedElements.forEach(element => {
         element.style.opacity = '0';
         element.style.transform = 'translateY(20px)';
@@ -64,38 +121,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Active navigation link highlighting
-window.addEventListener('scroll', () => {
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-link');
-    
-    let currentSection = '';
-    
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        
-        if (window.scrollY >= sectionTop - 200) {
-            currentSection = section.getAttribute('id');
-        }
-    });
-    
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${currentSection}`) {
-            link.classList.add('active');
-        }
-    });
-});
-
-// Add active class styling to CSS
 const style = document.createElement('style');
 style.textContent = `
     .nav-link.active {
         color: #2563eb !important;
         font-weight: 600;
     }
-    
+
     .nav-link.active::after {
         content: '';
         position: absolute;
@@ -105,18 +137,17 @@ style.textContent = `
         height: 2px;
         background: #2563eb;
     }
-    
+
     .nav-link {
         position: relative;
     }
 `;
 document.head.appendChild(style);
 
-// Typing effect for hero subtitle
 function typeWriter(element, text, speed = 50) {
     let i = 0;
     element.innerHTML = '';
-    
+
     function type() {
         if (i < text.length) {
             element.innerHTML += text.charAt(i);
@@ -124,11 +155,10 @@ function typeWriter(element, text, speed = 50) {
             setTimeout(type, speed);
         }
     }
-    
+
     type();
 }
 
-// Initialize typing effect when page loads
 document.addEventListener('DOMContentLoaded', () => {
     const heroSubtitle = document.querySelector('.hero-subtitle');
     if (heroSubtitle) {
@@ -139,7 +169,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Scroll to top functionality
 const scrollToTopBtn = document.createElement('button');
 scrollToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
 scrollToTopBtn.className = 'scroll-to-top';
@@ -185,7 +214,6 @@ scrollToTopBtn.addEventListener('mouseleave', () => {
     scrollToTopBtn.style.transform = 'scale(1)';
 });
 
-// Preloader
 const preloader = document.createElement('div');
 preloader.className = 'preloader';
 preloader.innerHTML = `
@@ -213,7 +241,7 @@ spinnerStyle.textContent = `
     .preloader-content {
         text-align: center;
     }
-    
+
     .spinner {
         width: 40px;
         height: 40px;
@@ -223,12 +251,12 @@ spinnerStyle.textContent = `
         animation: spin 1s linear infinite;
         margin: 0 auto 1rem;
     }
-    
+
     @keyframes spin {
         0% { transform: rotate(0deg); }
         100% { transform: rotate(360deg); }
     }
-    
+
     .preloader-content p {
         color: #2563eb;
         font-weight: 500;
@@ -237,7 +265,6 @@ spinnerStyle.textContent = `
 document.head.appendChild(spinnerStyle);
 document.body.appendChild(preloader);
 
-// Hide preloader when page is loaded
 window.addEventListener('load', () => {
     setTimeout(() => {
         preloader.style.opacity = '0';
@@ -247,15 +274,13 @@ window.addEventListener('load', () => {
     }, 1000);
 });
 
-// Form validation and contact functionality (if needed later)
 function validateEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
 }
 
-// Console welcome message
 console.log('%c Welcome to Taekyung Lee\'s Academic Website! ', 'background: #2563eb; color: white; padding: 10px; border-radius: 5px; font-size: 16px; font-weight: bold;');
-console.log('🤖 Interested in multi-agent systems, optimal control, and risk-aware planning? Let\'s connect!');
-console.log('📧 Email: tlee2@caltech.edu');
-console.log('🔗 LinkedIn: linkedin.com/in/taekyunglee04');
-console.log('💻 GitHub: github.com/tklee117'); 
+console.log('Interested in multi-agent systems, optimal control, and risk-aware planning? Let\'s connect.');
+console.log('Email: tlee2@caltech.edu');
+console.log('LinkedIn: linkedin.com/in/taekyunglee04');
+console.log('GitHub: github.com/tklee117');
