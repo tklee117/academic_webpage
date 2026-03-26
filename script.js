@@ -266,12 +266,10 @@ document.head.appendChild(spinnerStyle);
 document.body.appendChild(preloader);
 
 window.addEventListener('load', () => {
+    preloader.style.opacity = '0';
     setTimeout(() => {
-        preloader.style.opacity = '0';
-        setTimeout(() => {
-            preloader.remove();
-        }, 500);
-    }, 1000);
+        preloader.remove();
+    }, 500);
 });
 
 function validateEmail(email) {
