@@ -521,10 +521,14 @@ section.page-section-first {
 .project-images img {
     flex: 1 1 45%;
     min-width: 0;
-    max-height: 200px;
-    object-fit: cover;
+    width: 100%;
+    height: auto;
     border-radius: 6px;
     border: 1px solid #e5e7eb;
+}
+
+.project-images.stacked {
+    flex-direction: column;
 }
 
 /* Skills Section */
