@@ -79,7 +79,7 @@
             <ul class="nav-menu">
                 <li class="nav-item"><a href="index.html#about" class="nav-link" data-nav="about">About</a></li>
                 <li class="nav-item"><a href="education.html" class="nav-link" data-nav="education">Education</a></li>
-                <li class="nav-item"><a href="research.html" class="nav-link" data-nav="research">Research</a></li>
+                <li class="nav-item"><a href="index.html#research" class="nav-link" data-nav="research">Research</a></li>
                 <li class="nav-item"><a href="projects.html" class="nav-link" data-nav="projects">Projects</a></li>
                 <li class="nav-item"><a href="skills.html" class="nav-link" data-nav="skills">Skills</a></li>
                 <li class="nav-item"><a href="awards.html" class="nav-link" data-nav="awards">Awards</a></li>
@@ -145,6 +145,91 @@
                         <span>GPA: 4.2/4.3</span>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="research">
+        <div class="container">
+            <h2 class="section-title">Academic Research</h2>
+            <div class="research-timeline">
+
+                <div class="research-item">
+                    <div class="research-date">Jun 2025 - Present</div>
+                    <div class="research-content">
+                        <div class="research-content-with-image">
+                            <div>
+                                <h3>Frederick W. Drury, Jr. SURF Fellow - Multi-Agent Fault Detection & Isolation</h3>
+                                <p class="research-org">Autonomous Robotics and Control Lab, California Institute of Technology</p>
+                                <p class="research-advisor">Advised by Professor Soon-Jo Chung</p>
+                                <p class="research-location">Pasadena, CA</p>
+                                <div class="research-details">
+                                    <ul>
+                                        <li>Developed two-stage local FDI framework: (1) dual VAE/CVAE architecture learning latent representations of subsystem telemetry with causal modeling to distinguish sensor faults (VAE) from actuator faults (CVAE conditioned on parent sensor states), (2) MLP classifier with Stiefel manifold orthogonality constraints on concatenated latent features</li>
+                                        <li>Implemented global consensus module using GraphSAGE graph neural network for distributed belief aggregation across agent neighborhoods, improving fault detection accuracy through multi-hop message passing up to 50-agent swarms</li>
+                                        <li>Extending framework on realistic multi-spacecraft scenarios using Basilisk astrodynamics simulation, developing state estimation pipeline and recovery strategies for communication link failures, preparing manuscript for submission</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="research-image-container">
+                                <img src="materials/SURF_Presentation.jpeg" alt="SURF Presentation" class="research-image" loading="lazy">
+                                <a href="materials/SURF_VID.gif" class="project-link" target="_blank">
+                                    <i class="fas fa-play-circle"></i> View Demo
+                                </a>
+                                <a href="https://docs.google.com/presentation/d/11huzrQVpu2ZBsts15aIn_zw_mMw15dnPfQa2at37WFo/edit?usp=sharing" class="project-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> View Presentation
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="research-item">
+                    <div class="research-date">Jun 2025 - Present</div>
+                    <div class="research-content">
+                        <div class="research-content-with-image">
+                            <div>
+                                <h3>Robotics Institute Summer Scholar - Spatiotemporal Risk-Aware Proactive Planning</h3>
+                                <p class="research-org">Advanced Agent & Robotics Technology Lab, Carnegie Mellon University</p>
+                                <p class="research-advisor">Advised by Professor Katia Sycara</p>
+                                <p class="research-location">Pittsburgh, PA</p>
+                                <div class="research-details">
+                                    <ul>
+                                        <li>Developed risk-aware planning framework for autonomous navigation in spatiotemporally evolving hazardous environments using CNN-ConvLSTM architecture for model-free multi-horizon environmental forecasting</li>
+                                        <li>Implemented adaptive MPPI controller with CVaR-incorporated risk optimization balancing direct damage avoidance and worst-case exposure, achieving 40% cumulative risk reduction vs. baseline safe-set methods and preventing local minima trapping in wildfire simulation</li>
+                                        <li>Establishing baselines against CBF, HJ-reachability, and Safe RL methods; developing time-series diffusion model for enhanced online prediction accuracy toward Robotics and Automation Letters (RA-L) submission (Nov 2025)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="research-image-container">
+                                <img src="materials/RISS_Presentation.jpeg" alt="RISS Presentation" class="research-image" loading="lazy">
+                                <img src="materials/RISS_Poster.png" alt="RISS Research Poster" class="research-image" loading="lazy">
+                                <a href="https://drive.google.com/file/d/1Q58r8l9r-68mc9_clRTyREkwizOWHte1/view?usp=sharing" class="project-link" target="_blank">
+                                    <i class="fas fa-video"></i> View Video
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="research-item">
+                    <div class="research-date">Jan 2025 - Aug 2025</div>
+                    <div class="research-content">
+                        <h3>Student Researcher - Learning-Based Adaptive Control for Quadrotor Table Tennis</h3>
+                        <p class="research-org">Autonomous Robotics and Control Lab, California Institute of Technology</p>
+                        <p class="research-advisor">Advised by Professor Soon-Jo Chung</p>
+                        <p class="research-location">Pasadena, CA</p>
+                        <div class="research-details">
+                            <ul>
+                                <li>Implemented PPO-based controller for quadrotor ball interception in table tennis environment using Omnidrones</li>
+                                <li>Designed hierarchical control architecture with high-level strategic planner selecting optimal skills from imitation-learned policy sets based on real-time opponent movement analysis and ball trajectory prediction</li>
+                                <li>Developed physics-informed neural network modeling time-varying quadrotor-gimbal-paddle dynamics with coupling inertia parameterization enabling stable control under dynamic center of mass conditions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
