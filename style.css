@@ -479,6 +479,54 @@ section.page-section-first {
     transform: translateX(5px);
 }
 
+/* Academic Projects Layout */
+.project-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.project-description {
+    font-size: 0.88rem;
+    color: #6b7280;
+    line-height: 1.6;
+    margin: 0.5rem 0 0.75rem;
+}
+
+.project-links {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.project-links a {
+    color: #2563eb;
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 500;
+}
+
+.project-links a:hover {
+    text-decoration: underline;
+}
+
+.project-images {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.project-images img {
+    flex: 1 1 45%;
+    min-width: 0;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #e5e7eb;
+}
+
 /* Skills Section */
 .skills {
     background: #fafafa;
@@ -865,6 +913,10 @@ section.page-section-first {
     }
 
     .research-content-with-image {
+        grid-template-columns: 1fr;
+    }
+
+    .project-layout {
         grid-template-columns: 1fr;
     }
 
