@@ -531,6 +531,13 @@ section.page-section-first {
     flex-direction: column;
 }
 
+.project-pdf {
+    width: 100%;
+    height: 420px;
+    border-radius: 6px;
+    border: 1px solid #e5e7eb;
+}
+
 /* Skills Section */
 .skills {
     background: #fafafa;
