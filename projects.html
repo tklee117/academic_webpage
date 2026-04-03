@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left: '$', right: '$', display: false}]});"></script>
 </head>
 <body>
     <nav class="navbar">
@@ -31,6 +35,26 @@
         </div>
     </nav>
 
+    <div class="research-item">
+        <div class="research-date">Jan 2026 - Mar 2026</div>
+        <div class="research-content">
+            <div class="project-layout">
+                <div>
+                    <h3>Pursuit-Evasion Game Dynamics: Analysis</h3>
+                    <p class="research-org">Individual Project · California Institute of Technology</p>
+                    <p class="project-description"> Applying nonlinear dynamics theory — Lipschitz bounds, Lyapunov stability, ISS, and barrier functions — to formally analyze a two-agent pursuit-evasion game where a pursuer tries to intercept an evader before it reaches a protected zone. </p>
+                    <div class="project-links">
+                        <a href="materials/CDS_232_final_report.pdf" target="_blank">[Report]</a>
+                        <a href="https://drive.google.com/file/d/1tfa1wvEoSb66-0uOElG2GAXeXMko9LsU/view?usp=sharing" target="_blank">[Video]</a>
+                    </div>
+                </div>
+                <div class="project-images">
+                    <img src="materials/cds232.jpg" alt="Pursuit-Evasion Game Dynamics" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+
     <section id="projects" class="projects page-section-first">
         <div class="container">
             <h2 class="section-title">Projects</h2>
@@ -42,8 +66,8 @@
                         <div class="project-layout">
                             <div>
                                 <h3>Optimal Retinal Ganglion Cell Allocation under Fixed Channel Budgets</h3>
-                                <p class="research-org">Individual Project · California Institute of Technology</p>
-                                <p class="project-description">We model the primate retina's ganglion cell (RGC) distribution as a fixed-budget resource allocation problem and compare allocation strategies against rate-distortion theory. Using Difference-of-Gaussians receptive fields tiled via k-means Voronoi cells, we show that gradient-energy-optimal allocation consistently minimizes reconstruction MSE across all tested budgets, and that evolutionary learning converges toward — and ultimately surpasses — the analytic optimum. These results support the hypothesis that the fovea's disproportionate RGC density reflects complexity-matched, rate-distortion-optimal coding.</p>
+                                <p class="research-org">Team Project · California Institute of Technology</p>
+                                <p class="project-description">The mammalian retina must compress a high-dimensional visual scene into a limited number of retinal ganglion cell (RGC) spike trains along the optic nerve. Given the optical constraints of the eye lens, such as aberrations, input image statistics contain varying local spatial complexity around the fovea. Furthermore, the primate fovea dedicates 80% of ganglion cells to the central visual field. We hypothesize that a nonuniform allocation is optimal from an information-theoretic perspective. We model RGC distributions across retinal regions as a fixed-budget resource allocation problem and compare allocation strategies against rate-distortion theory. Our computational pipeline treats RGCs as mosaics of Difference-of-Gaussians (DoG) receptive fields tiled via $k$-means Voronoi cells, where each cell's center radius scales as $\sigma_c = s\sqrt{A_i}$ with its patch area $A_i$. Images are encoded into ON/OFF half-wave-rectified ganglion-cell responses and reconstructed via a minimum-norm matched-filter pseudoinverse decoder. Allocation strategies are compared against rate-distortion theory, which analytically predicts that optimal resources scale with $n_i \propto c_i^{1/(1+p)},$ where $c_i$ is local gradient-energy complexity and $p$ governs the distortion power law. We also test whether the optimal allocation is achievable under evolutionary algorithm schemes with random initializations. Experiments use synthetic image ensembles with controlled regional statistics&mdash;horizontal bands of varying texture and concentric foveal rings&mdash;and compare the uniform, gradient-energy optimal, and adversarial reverse cell allocations. Across all tested budgets ($N = 8 \sim 8192$), the gradient-energy optimal allocation consistently yields the lowest reconstruction MSE, with the benefit growing monotonically with both budget size and inter-regional complexity contrast. The reverse baseline consistently under-performs, confirming that allocation order matters. Evolutionary learning converges in the direction of the theoretically optimal allocation and ultimately surpasses it, achieving lower MSE than the analytic solution. Taken together, these results support the normative hypothesis that the primate fovea's disproportionate ganglion-cell density is consistent with complexity-matched, rate-distortion-optimal coding.</p>
                                 <div class="project-links">
                                     <span style="color:#2563eb; font-size:0.88rem; font-weight:500;">[Submitted to CCN 2026, coming soon]</span>
                                 </div>
@@ -52,26 +76,6 @@
                                 <img src="materials/fig1.png" alt="RGC Allocation Figure 1" loading="lazy">
                                 <img src="materials/fig2.png" alt="RGC Allocation Figure 2" loading="lazy">
                                 <img src="materials/fig3.png" alt="RGC Allocation Figure 3" loading="lazy">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="research-item">
-                    <div class="research-date">Jan 2026 - Mar 2026</div>
-                    <div class="research-content">
-                        <div class="project-layout">
-                            <div>
-                                <h3>Pursuit-Evasion Game Dynamics: Analysis</h3>
-                                <p class="research-org">Individual Project · California Institute of Technology</p>
-                                <p class="project-description"> Applying nonlinear dynamics theory — Lipschitz bounds, Lyapunov stability, ISS, and barrier functions — to formally analyze a two-agent pursuit-evasion game where a pursuer tries to intercept an evader before it reaches a protected zone. </p>
-                                <div class="project-links">
-                                    <a href="materials/CDS_232_final_report.pdf" target="_blank">[Report]</a>
-                                    <a href="https://drive.google.com/file/d/1tfa1wvEoSb66-0uOElG2GAXeXMko9LsU/view?usp=sharing" target="_blank">[Video]</a>
-                                </div>
-                            </div>
-                            <div class="project-images">
-                                <img src="materials/cds232.jpg" alt="Pursuit-Evasion Game Dynamics" loading="lazy">
                             </div>
                         </div>
                     </div>
