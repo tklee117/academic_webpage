@@ -541,7 +541,7 @@ section.page-section-first {
     gap: 0.75rem;
 }
 
-.project-images.mosaic img:last-child {
+.project-images.mosaic img:first-child {
     grid-column: 1 / -1;
 }
 
